@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #88AB8E;
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #000;
+}
+
+.container {
+    background-color: #fff;
+    padding: 48px;
+    border-radius: 20px;
+
+}
+
+.game-section {
+    margin-top: 30px;
+}
+
+.hangman {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.word-disply {
+    display: flex;
+    gap: 6px;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.word-disply .letter {
+    border-bottom: 3px solid black;
+    width: 28px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.word-disply .letter.guessed {
+    border-color: transparent;
+    margin: -40px 0 20px;
+}
+
+.game-section h4 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.game-section .gusse-text b {
+    color: red;
+}
+
+.game-section .keyboard {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.keyboard button {
+    background-color: #88AB8E;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    text-transform: uppercase;
+    width: calc(100% /9 - 5px);
+}
+
+.keyboard button:hover {
+    background-color: rgba(136, 171, 142, 0.8);
+}
+
+.keyboard button[disabled] {
+    opacity: 0.6;
+    pointer-events: none;
+
+}
+
+.game-model {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity 0.4s ease;
+}
+
+.game-model.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+.game-model .content {
+    background-color: #fff;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.game-model img {
+    max-width: 130px;
+    margin-bottom: 20px;
+}
+
+.game-model .content h4 {
+    font-size: 24px;
+}
+
+.game-model .content p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.game-model .content p b {
+    color: rgb(136, 171, 142);
+    font-weight: 700;
+}
+
+.game-model .content button {
+    padding: 12px 20px;
+    background-color: #88AB8E;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.game-model .content button:hover {
+    background-color: rgba(136, 171, 142, 0.8);
+}
